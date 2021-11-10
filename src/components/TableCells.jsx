@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TableCell from "@mui/material/TableCell";
 import Box from "@mui/material/Box";
+import PropTypes from "prop-types";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
@@ -150,6 +151,15 @@ const TableCells = (props) => {
       </TableCell>
     </>
   );
+};
+
+TableCells.PropTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number,
+  gender: PropTypes.string,
+  purpose: PropTypes.string,
+  phone: PropTypes.string,
+  _id: PropTypes.string,
 };
 
 export default TableCells;
